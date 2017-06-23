@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {
   View,
   StatusBar,
-  Image
+  Image,
+  StyleSheet
 } from 'react-native';
 
 import NavigationBar from './NavigationBar';
@@ -19,12 +20,39 @@ export default class MainScene extends Component {
         <View>
           <StatusBar backgroundColor='#CCC' />
           <NavigationBar />
-          <Image source={logo} />
-          <Image source={menuClient} />
-          <Image source={menuContact} />
-          <Image source={menuEmployee} />
-          <Image source={menuService} />
+          
+          <View style={styles.styleView}>
+            <Image source={logo} />
+          </View>
+          
+          <View style={styles.styleMenu}>
+            <View style={styles.styleMenuGroup}>
+              <Image source={menuClient} style={styles.imgMenu} />
+              <Image source={menuContact} style={styles.imgMenu} />
+            </View>
+            <View style={styles.styleMenuGroup}>
+              <Image source={menuEmployee} style={styles.imgMenu} />
+              <Image source={menuService} style={styles.imgMenu} />
+            </View>
+          </View>
+
         </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  styleView: {
+    alignItems: 'center',
+    marginTop: 30
+  },
+  styleMenu: {
+    alignItems: 'center'
+  },
+  styleMenuGroup: {
+    flexDirection: 'row'
+  },
+  imgMenu: {
+    margin: 15
+  }
+});

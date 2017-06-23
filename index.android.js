@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import {
   AppRegistry
 } from 'react-native';
-import StatusBar from './src/components/StatusBar';
+import MainScene from './src/components/MainScene';
 
 
 export default class AppAtm extends Component {
   render() {
     return (
-        <StatusBar />
+        <MainScene />
     );
   }
 }

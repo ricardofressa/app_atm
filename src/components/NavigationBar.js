@@ -6,12 +6,12 @@ import {
 } from 'react-native';
 
 
-export default class StatusBar extends Component {
+export default class NavigationBar extends Component {
   render() {
     return (
-    	<View style={styles.statusBar}>
-    		<Text style={styles.txtTitle}> ATM CONSULTORIA </Text>
-    	</View>
+	<View style={styles.statusBar}>
+		<Text style={styles.txtTitle}>ATM CONSULTORIA</Text>
+	</View>
     );
   }
 }
@@ -26,6 +26,6 @@ const styles = StyleSheet.create({
 		flex: 1,
 		fontSize: 18,
 		textAlign: 'center',
-		color: "#000"
+		color: '#000'
 	}
 });

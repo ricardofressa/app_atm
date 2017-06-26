@@ -20,19 +20,19 @@ export default class ClientScene extends Component {
           <StatusBar backgroundColor='#CCC' />
           <NavigationBar />
 
-          <View style={styles.header} />
+          <View style={styles.header}>
             <Image source={logoClient} />
-            <Tex style={styles.txtTitle}>Nossos clientes</Text>
+            <Text style={styles.txtTitle}>Nossos clientes</Text>
           </View>
 
           <View style={styles.detailClient}>
             <Image source={client1} />
-            <Text style={txtDetailClient}>Lorem ipsum dolorem</Text> 
+            <Text style={styles.txtDetailClient}>Lorem ipsum dolorem</Text> 
           </View>
 
           <View style={styles.detaulClient}>
             <Image source={client2} />
-            <Text style={txtDetailClient}>Lorem ipsum dolorem</Text>
+            <Text style={styles.txtDetailClient}>Lorem ipsum dolorem</Text>
           </View>
 
         </View>
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     marginTop: 10
   },
   txtDetailClient: {
-    fontsize: 18,
+    fontSize: 18,
     marginLeft: 20
   }
 });

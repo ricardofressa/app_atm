@@ -3,7 +3,8 @@ import {
   View,
   StatusBar,
   Image,
-  StyleSheet
+  StyleSheet,
+  TouchableHighlight
 } from 'react-native';
 
 import NavigationBar from './NavigationBar';
@@ -19,7 +20,7 @@ export default class MainScene extends Component {
     return (
         <View>
           <StatusBar backgroundColor='#CCC' />
-          <NavigationBar />
+          <NavigationBar back />
           
           <View style={styles.styleView}>
             <Image source={logo} />
@@ -27,7 +28,13 @@ export default class MainScene extends Component {
           
           <View style={styles.styleMenu}>
             <View style={styles.styleMenuGroup}>
+            <TouchableHighlight
+              onPress={() => {
+                this.props.navigator.push({ id: 'b' });
+              }}
+            >
               <Image source={menuClient} style={styles.imgMenu} />
+            </TouchableHighlight>
               <Image source={menuContact} style={styles.imgMenu} />
             </View>
             <View style={styles.styleMenuGroup}>

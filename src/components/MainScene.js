@@ -20,7 +20,7 @@ export default class MainScene extends Component {
     return (
         <View>
           <StatusBar backgroundColor='#CCC' />
-          <NavigationBar back />
+          <NavigationBar navigator={this.props.navigator} />
           
           <View style={styles.styleView}>
             <Image source={logo} />

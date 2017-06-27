@@ -3,8 +3,8 @@ import {
   AppRegistry
 } from 'react-native';
 import { Navigator } from 'react-native-deprecated-custom-components';
-import { MainScene } from './src/components/MainScene';
-import { ClientScene } from './src/components/ClientScene';
+import MainScene from './src/components/MainScene';
+import ClientScene from './src/components/ClientScene';
 
 
 export default class AppAtm extends Component {
@@ -21,7 +21,7 @@ export default class AppAtm extends Component {
 
             if (route.id === 'b') {
               //exibir a cenaClientes
-              return (<ClientScene />);
+              return (<ClientScene navigator={navigator} />);
             }
           }}
         />

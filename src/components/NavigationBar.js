@@ -3,7 +3,8 @@ import {
   View,
   Text,
   StyleSheet,
-  Image
+  Image,
+  TouchableHighlight
 } from 'react-native';
 
 const imgBack = require('../imgs/btn_voltar.png');
@@ -13,7 +14,13 @@ export default class NavigationBar extends Component {
 	if (this.props.back) {
 		return (
   <View style={styles.statusBar}>
-    <Image source={imgBack} />
+  <TouchableHighlight 
+	onPress={() => { 
+	this.props.navigator.pop(); 
+	}} 
+  >
+	<Image source={imgBack} />
+    </TouchableHighlight>
 			<Text style={styles.txtTitle}>ATM CONSULTORIA</Text>
 	</View>
 			);		

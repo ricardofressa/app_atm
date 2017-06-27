@@ -18,7 +18,7 @@ export default class ClientScene extends Component {
     return (
         <View>
           <StatusBar backgroundColor='#CCC' />
-          <NavigationBar />
+          <NavigationBar back navigator={this.props.navigator} />
 
           <View style={styles.header}>
             <Image source={logoClient} />
@@ -30,7 +30,7 @@ export default class ClientScene extends Component {
             <Text style={styles.txtDetailClient}>Lorem ipsum dolorem</Text> 
           </View>
 
-          <View style={styles.detaulClient}>
+          <View style={styles.detailClient}>
             <Image source={client2} />
             <Text style={styles.txtDetailClient}>Lorem ipsum dolorem</Text>
           </View>

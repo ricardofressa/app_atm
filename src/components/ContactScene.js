@@ -14,8 +14,8 @@ const logoContact = require('../imgs/detalhe_contato.png');
 export default class ContactScene extends Component {
   render() {
     return (
-        <View>
-          <StatusBar backgroundColor='#CCC' />
+        <View style={{ backgroundColor: '#FFF', flex: 1 }}>
+          <StatusBar backgroundColor='#61BD8C' />
           <NavigationBar back navigator={this.props.navigator} />
 
           <View style={styles.header}>

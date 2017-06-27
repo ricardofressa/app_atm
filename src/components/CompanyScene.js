@@ -16,7 +16,7 @@ const client2 = require('../imgs/cliente2.png');
 export default class CompanyScene extends Component {
   render() {
     return (
-        <View>
+        <View style={{ backgroundColor: '#FFF', flex: 1 }}>
           <StatusBar backgroundColor='#EC7148' />
           <NavigationBar back navigator={this.props.navigator} />
 

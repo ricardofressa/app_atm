@@ -16,8 +16,8 @@ const client2 = require('../imgs/cliente2.png');
 export default class ClientScene extends Component {
   render() {
     return (
-        <View>
-          <StatusBar backgroundColor='#CCC' />
+        <View style={{ backgroundColor: '#FFF', flex: 1 }}>
+          <StatusBar backgroundColor='#B9C941' />
           <NavigationBar back navigator={this.props.navigator} />
 
           <View style={styles.header}>

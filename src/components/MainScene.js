@@ -18,7 +18,7 @@ const menuService = require('../imgs/menu_servico.png');
 export default class MainScene extends Component {
   render() {
     return (
-        <View>
+        <View style={{ backgroundColor: '#FFF', flex: 1 }}>
           <StatusBar backgroundColor='#CCC' />
           <NavigationBar navigator={this.props.navigator} />
           
@@ -30,16 +30,34 @@ export default class MainScene extends Component {
             <View style={styles.styleMenuGroup}>
             <TouchableHighlight
               onPress={() => {
-                this.props.navigator.push({ id: 'b' });
+                this.props.navigator.push({ id: 'clients' });
               }}
             >
               <Image source={menuClient} style={styles.imgMenu} />
             </TouchableHighlight>
+            <TouchableHighlight
+              onPress={() => {
+                this.props.navigator.push({ id: 'contact' });
+              }}
+            >
               <Image source={menuContact} style={styles.imgMenu} />
+            </TouchableHighlight>
             </View>
             <View style={styles.styleMenuGroup}>
+            <TouchableHighlight
+              onPress={() => {
+                this.props.navigator.push({ id: 'company' });
+              }}
+            >
               <Image source={menuEmployee} style={styles.imgMenu} />
+            </TouchableHighlight>
+                        <TouchableHighlight
+              onPress={() => {
+                this.props.navigator.push({ id: 'service' });
+              }}
+            >
               <Image source={menuService} style={styles.imgMenu} />
+            </TouchableHighlight>
             </View>
           </View>
 

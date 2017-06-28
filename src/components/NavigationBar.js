@@ -13,8 +13,10 @@ export default class NavigationBar extends Component {
   render() {
 	if (this.props.back) {
 		return (
-  <View style={styles.statusBar}>
-  <TouchableHighlight 
+  <View style={[styles.statusBar, {backgroundColor: this.props.background }]}>
+  <TouchableHighlight
+  	underlayColor={this.props.background}
+  	activeOpacity={0.3} 
 	onPress={() => { 
 	this.props.navigator.pop(); 
 	}} 
@@ -36,8 +38,8 @@ export default class NavigationBar extends Component {
 const styles = StyleSheet.create({
 	statusBar: {
 		backgroundColor: '#CCC',
-		padding: 10,
-		height: 60,
+		padding: 25,
+		height: 70,
 		flexDirection: 'row'
 	},
 	txtTitle: {

@@ -18,7 +18,7 @@ export default class CompanyScene extends Component {
     return (
         <View style={{ backgroundColor: '#FFF', flex: 1 }}>
           <StatusBar backgroundColor='#19D1C8' />
-          <NavigationBar back navigator={this.props.navigator} />
+          <NavigationBar back navigator={this.props.navigator} background='#19D1C8' />
 
           <View style={styles.header}>
             <Image source={logoService} />

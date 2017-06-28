@@ -18,7 +18,7 @@ export default class ClientScene extends Component {
     return (
         <View style={{ backgroundColor: '#FFF', flex: 1 }}>
           <StatusBar backgroundColor='#B9C941' />
-          <NavigationBar back navigator={this.props.navigator} />
+          <NavigationBar back navigator={this.props.navigator} background='#B9C941' />
 
           <View style={styles.header}>
             <Image source={logoClient} />

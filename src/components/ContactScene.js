@@ -16,7 +16,7 @@ export default class ContactScene extends Component {
     return (
         <View style={{ backgroundColor: '#FFF', flex: 1 }}>
           <StatusBar backgroundColor='#61BD8C' />
-          <NavigationBar back navigator={this.props.navigator} />
+          <NavigationBar back navigator={this.props.navigator} background='#61BD8C' />
 
           <View style={styles.header}>
             <Image source={logoContact} />

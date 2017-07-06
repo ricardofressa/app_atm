@@ -1,53 +1,46 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
+  AppRegistry
 } from 'react-native';
+import { Navigator } from 'react-native-deprecated-custom-components';
+import MainScene from './src/components/MainScene';
+import ClientScene from './src/components/ClientScene';
+import ContactScene from './src/components/ContactScene';
+import CompanyScene from './src/components/CompanyScene';
+import ServiceScene from './src/components/ServiceScene';
 
-export default class app_atm extends Component {
+
+export default class AppAtm extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
+        <Navigator
+          initialRoute={{ id: 'main' }}
+          renderScene={(route, navigator) => {
+            /* definir a cena com base na rota */
+
+            switch (route.id) {
+              case 'main' :
+                return (<MainScene navigator={navigator} />);
+
+              case 'clients' :
+                return (<ClientScene navigator={navigator} />);
+
+              case 'contact' :
+                return (<ContactScene navigator={navigator} />);
+
+              case 'company' :
+                return (<CompanyScene navigator={navigator} />);
+
+              case 'service' :
+                return (<ServiceScene navigator={navigator} />);
+
+              default :
+                return false;
+            }
+          }}
+        />
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
-
-AppRegistry.registerComponent('app_atm', () => app_atm);
+AppRegistry.registerComponent('app_atm', () => AppAtm);
